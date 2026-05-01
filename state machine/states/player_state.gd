@@ -5,6 +5,7 @@ const RUNNING = "Running"
 const JUMPING = "Jumping"
 const FALLING = "Falling"
 const ATTACKING = "Attacking"
+const SPECIAL = "Special"
 
 var player: Player
 

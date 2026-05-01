@@ -15,3 +15,5 @@ func physics_update(delta: float) -> void:
 			finished.emit(IDLE)
 		else:
 			finished.emit(RUNNING)
+	if Input.is_action_just_pressed("B"):
+		finished.emit(SPECIAL)

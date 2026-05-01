@@ -2,8 +2,7 @@ extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
 	player.velocity.x = 0.0
-	player.animation_player.play("attack")
-	print("ATTACKING")
+	player.animation_player.play("special")
 
 func physics_update(_delta: float) -> void:
 	var input_direction_x := Input.get_axis("left", "right")
