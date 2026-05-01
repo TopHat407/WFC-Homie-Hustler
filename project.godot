@@ -20,8 +20,9 @@ config/icon="res://icon.svg"
 folder_colors={
 "res://entities/": "red",
 "res://entities/characters/": "purple",
-"res://interface/": "teal",
-"res://levels/": "green"
+"res://interface/": "yellow",
+"res://levels/": "green",
+"res://state machine/": "orange"
 }
 
 [input]
