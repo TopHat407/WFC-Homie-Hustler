@@ -2,11 +2,11 @@ extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
 	player.animation_player.play("run")
-	print("RUNNING")
+	print("FORWARD")
 
 func physics_update(delta: float) -> void:
-	var input_direction_x := Input.get_axis("left", "right")
-	player.velocity.x = player.speed * input_direction_x
+	var input_direction_x := Input.is_action_pressed("right")
+	player.velocity.x = player.speed 
 	player.velocity.y += player.gravity * delta
 	player.move_and_slide()
 

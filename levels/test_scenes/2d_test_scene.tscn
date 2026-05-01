@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://drevs21h27tdn"]
 
 [ext_resource type="Texture2D" uid="uid://trn7x5v726ia" path="res://levels/test_scenes/assets/debug_level.png" id="2_qbbvr"]
+[ext_resource type="Script" uid="uid://cip1nto24wyqe" path="res://levels/test_scenes/canvas_layer.gd" id="3_8kouv"]
 [ext_resource type="PackedScene" uid="uid://c40fiwmpvgu6" path="res://entities/characters/debug test character/scenes/player.tscn" id="6_csjpw"]
 [ext_resource type="Texture2D" uid="uid://t7opw8xb6okh" path="res://interface/combat_ui/assets/Empty Health.png" id="6_veh22"]
 [ext_resource type="Texture2D" uid="uid://i51mgbbplwx" path="res://interface/combat_ui/assets/Outline.png" id="7_nvmr7"]
@@ -31,6 +32,7 @@ zoom = Vector2(4.1, 4.1)
 script = ExtResource("8_nvmr7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=652699859]
+script = ExtResource("3_8kouv")
 
 [node name="Control" type="Control" parent="Camera2D/CanvasLayer" unique_id=1466112158]
 layout_mode = 3

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://ckt0ahtfwwqy5"]
+
+[ext_resource type="Script" uid="uid://bhvrayancexgi" path="res://interface/menus/floating_button.gd" id="1_hf3go"]
+[ext_resource type="Shader" uid="uid://uul65wv728gy" path="res://interface/menus/floating_button.gdshader" id="1_i4ec3"]
+[ext_resource type="AudioStream" uid="uid://fgotafgtpxor" path="res://interface/menus/sounds/hover.wav" id="2_kdkxd"]
+[ext_resource type="AudioStream" uid="uid://cejymnttg506n" path="res://interface/menus/sounds/pressed.wav" id="3_i4ec3"]
+[ext_resource type="AudioStream" uid="uid://bk65wlwdv5i2t" path="res://interface/menus/sounds/released.wav" id="4_ta0lp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ta0lp"]
+shader = ExtResource("1_i4ec3")
+shader_parameter/rect_size = Vector2(1, 1)
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 0.0
+shader_parameter/inset = 0.0
+shader_parameter/modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vsk45"]
+
+[node name="FloatingButton" type="TextureRect" unique_id=1777980090]
+texture_filter = 1
+material = SubResource("ShaderMaterial_ta0lp")
+offset_left = 550.0
+offset_top = 400.0
+offset_right = 630.0
+offset_bottom = 480.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = SubResource("PlaceholderTexture2D_vsk45")
+script = ExtResource("1_hf3go")
+
+[node name="Hover" type="AudioStreamPlayer" parent="." unique_id=1351277171]
+stream = ExtResource("2_kdkxd")
+
+[node name="Pressed" type="AudioStreamPlayer" parent="." unique_id=439463291]
+stream = ExtResource("3_i4ec3")
+
+[node name="Released" type="AudioStreamPlayer" parent="." unique_id=1002852900]
+stream = ExtResource("4_ta0lp")
+
+[node name="Label" type="Label" parent="." unique_id=405778528]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Me"
+horizontal_alignment = 1
+vertical_alignment = 1

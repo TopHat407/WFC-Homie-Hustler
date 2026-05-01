@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://qk0bovavau1l" path="res://state machine/states/falling.gd" id="10_u0c8f"]
 [ext_resource type="Script" uid="uid://dkaii51ywri5d" path="res://state machine/states/attacking.gd" id="12_1m6a1"]
 [ext_resource type="Script" uid="uid://go0c2esy735p" path="res://state machine/states/special.gd" id="13_sd0mn"]
+[ext_resource type="Script" uid="uid://xekgen64y26s" path="res://state machine/states/backward.gd" id="15_7ggwk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xjrkv"]
 atlas = ExtResource("3_1m6a1")
@@ -210,7 +211,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack",
-"speed": 9.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -325,7 +326,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 13.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -369,7 +370,7 @@ jump_impulse = 300.0
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qv8fh")
-animation = &"special"
+animation = &"attack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1191701007]
@@ -383,7 +384,7 @@ initial_state = NodePath("Idle")
 [node name="Idle" type="Node" parent="StateMachine" unique_id=1631539742]
 script = ExtResource("7_f3unh")
 
-[node name="Running" type="Node" parent="StateMachine" unique_id=1102799362]
+[node name="Forward" type="Node" parent="StateMachine" unique_id=1102799362]
 script = ExtResource("8_a3nbc")
 
 [node name="Jumping" type="Node" parent="StateMachine" unique_id=1883420336]
@@ -397,3 +398,6 @@ script = ExtResource("12_1m6a1")
 
 [node name="Special" type="Node" parent="StateMachine" unique_id=1015248585]
 script = ExtResource("13_sd0mn")
+
+[node name="Backward" type="Node" parent="StateMachine" unique_id=1663359928]
+script = ExtResource("15_7ggwk")

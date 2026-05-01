@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bri2dpr2ks4v4"]
+
+[ext_resource type="PackedScene" uid="uid://ckt0ahtfwwqy5" path="res://interface/menus/floating_button.tscn" id="1_scp0l"]
+
+[node name="Menu" type="CanvasLayer" unique_id=2022974063]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1893950329]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FloatingButton" parent="VBoxContainer" unique_id=1777980090 instance=ExtResource("1_scp0l")]
+layout_mode = 2
+size_flags_vertical = 3

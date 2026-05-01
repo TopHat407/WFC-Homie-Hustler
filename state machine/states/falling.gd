@@ -14,6 +14,7 @@ func physics_update(delta: float) -> void:
 		if is_equal_approx(input_direction_x, 0.0):
 			finished.emit(IDLE)
 		else:
-			finished.emit(RUNNING)
-	if Input.is_action_just_pressed("B"):
-		finished.emit(SPECIAL)
+			if Input.is_action_pressed("right"):
+				finished.emit(FORWARD)
+			elif Input.is_action_pressed("left"):
+				finished.emit(BACKWARD)
