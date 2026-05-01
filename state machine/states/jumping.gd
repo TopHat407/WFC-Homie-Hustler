@@ -2,7 +2,7 @@ extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
 	player.velocity.y = -player.jump_impulse
-	#player.animation_player.play("jump")
+	player.animation_player.play("jump")
 	print("JUMPING")
 
 func physics_update(delta: float) -> void:

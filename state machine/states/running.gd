@@ -16,3 +16,5 @@ func physics_update(delta: float) -> void:
 		finished.emit(JUMPING)
 	elif is_equal_approx(input_direction_x, 0.0):
 		finished.emit(IDLE)
+	elif Input.is_action_just_pressed("X"):
+		finished.emit(ATTACKING)
