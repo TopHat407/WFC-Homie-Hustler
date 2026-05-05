@@ -1,12 +1,11 @@
 extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
-	player.animation_player.play("back_walk")
-	print("BACKWARD")
+	player.animation_player.play("run")
 
 func physics_update(delta: float) -> void:
-	var input_direction_x := Input.is_action_pressed("left")
-	player.velocity.x = -player.speed * 0.4
+	var input_direction_x := Input.is_action_pressed("right")
+	player.velocity.x = player.speed 
 	player.velocity.y += player.gravity * delta
 	player.move_and_slide()
 
@@ -20,3 +19,17 @@ func physics_update(delta: float) -> void:
 		finished.emit(ATTACKING)
 	elif Input.is_action_just_pressed("B"):
 		finished.emit(FORWARD_SPECIAL)
+	elif player.win == true:
+		finished.emit(WIN)
+	elif player.lose == true:
+		finished.emit(LOSE)
+
+
+
+
+func _on_player_playerlose() -> void:
+	player.win = true
+
+
+func _on_player_playerwin() -> void:
+	player.lose = true

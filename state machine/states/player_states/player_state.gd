@@ -8,6 +8,8 @@ const FALLING = "Falling"
 const ATTACKING = "Attacking"
 const NEUTRAL_SPECIAL = "Neutral_Special"
 const FORWARD_SPECIAL = "Forward_Special"
+const WIN = "Win"
+const LOSE = "Lose"
 
 var player: Player
 

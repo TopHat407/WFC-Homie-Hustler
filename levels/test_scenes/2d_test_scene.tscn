@@ -5,8 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://c40fiwmpvgu6" path="res://entities/characters/debug test character/scenes/player.tscn" id="6_csjpw"]
 [ext_resource type="Texture2D" uid="uid://t7opw8xb6okh" path="res://interface/combat_ui/assets/Empty Health.png" id="6_veh22"]
 [ext_resource type="Texture2D" uid="uid://i51mgbbplwx" path="res://interface/combat_ui/assets/Outline.png" id="7_nvmr7"]
+[ext_resource type="Texture2D" uid="uid://dpjifm4r2wl8n" path="res://assets/Win Lose.png" id="7_veh22"]
+[ext_resource type="FontFile" uid="uid://bq3jv7yoboe21" path="res://assets/fonts/Cheltenham Condensed Bold.ttf" id="8_4wvwl"]
 [ext_resource type="Script" uid="uid://v20lrkhshtng" path="res://levels/test_scenes/camera_2d.gd" id="8_nvmr7"]
 [ext_resource type="Texture2D" uid="uid://dihgg72iot33w" path="res://interface/combat_ui/assets/Full Health.png" id="8_s275g"]
+[ext_resource type="PackedScene" uid="uid://c8s0bh4glmb4l" path="res://entities/characters/debug test dummy/scenes/dummy.tscn" id="10_utxc2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_csjpw"]
 
@@ -27,11 +30,13 @@ scale = Vector2(44.565, 1)
 shape = SubResource("RectangleShape2D_csjpw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1569434249]
+position = Vector2(63.96, 31.195)
 anchor_mode = 0
-zoom = Vector2(4.1, 4.1)
+zoom = Vector2(6.39, 6.39)
 script = ExtResource("8_nvmr7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=652699859]
+unique_name_in_owner = true
 script = ExtResource("3_8kouv")
 
 [node name="Control" type="Control" parent="Camera2D/CanvasLayer" unique_id=1466112158]
@@ -73,5 +78,34 @@ texture_under = ExtResource("6_veh22")
 texture_over = ExtResource("7_nvmr7")
 texture_progress = ExtResource("8_s275g")
 
+[node name="TextureRect" type="TextureRect" parent="Camera2D/CanvasLayer/Control" unique_id=2010571859]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_veh22")
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Control/TextureRect" unique_id=1236258809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_4wvwl")
+theme_override_font_sizes/font_size = 100
+text = "YOU WIN!"
+vertical_alignment = 1
+
 [node name="Player" parent="." unique_id=1162202406 instance=ExtResource("6_csjpw")]
+unique_name_in_owner = true
 position = Vector2(100, 100)
+
+[node name="Dummy" parent="." unique_id=196554576 instance=ExtResource("10_utxc2")]
+unique_name_in_owner = true
+position = Vector2(197, 98)
+
+[connection signal="lose" from="Camera2D/CanvasLayer" to="Player" method="_on_canvas_layer_lose"]
+[connection signal="lose" from="Camera2D/CanvasLayer" to="Dummy" method="_on_canvas_layer_lose"]
+[connection signal="win" from="Camera2D/CanvasLayer" to="Player" method="_on_canvas_layer_win"]
+[connection signal="win" from="Camera2D/CanvasLayer" to="Dummy" method="_on_canvas_layer_win"]

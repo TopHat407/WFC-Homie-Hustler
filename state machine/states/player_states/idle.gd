@@ -3,8 +3,7 @@ extends PlayerState
 func enter(previous_state_path: String, data := {}) -> void:
 	player.velocity.x = 0.0
 	player.animation_player.play("idle")
-	print("IDLE")
-	
+
 
 func physics_update(_delta: float) -> void:
 	player.velocity.y += player.gravity * _delta
@@ -22,3 +21,17 @@ func physics_update(_delta: float) -> void:
 		finished.emit(ATTACKING)
 	elif Input.is_action_just_pressed("B"):
 		finished.emit(NEUTRAL_SPECIAL)
+	elif player.win == true:
+		finished.emit(WIN)
+	elif player.lose == true:
+		finished.emit(LOSE)
+
+
+
+
+func _on_player_playerlose() -> void:
+	player.win = true
+
+
+func _on_player_playerwin() -> void:
+	player.lose = true
