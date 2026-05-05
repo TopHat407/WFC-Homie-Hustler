@@ -18,8 +18,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 
 func _on_canvas_layer_lose() -> void:
-	playerwin.emit()
+	playerlose.emit()
 
 
 func _on_canvas_layer_win() -> void:
-	playerlose.emit()
+	playerwin.emit()

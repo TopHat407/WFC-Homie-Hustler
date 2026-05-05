@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ckt0ahtfwwqy5"]
 
-[ext_resource type="Script" uid="uid://bhvrayancexgi" path="res://interface/menus/floating_button.gd" id="1_hf3go"]
+[ext_resource type="Script" uid="uid://bhvrayancexgi" path="res://interface/menus/scripts/floating_button.gd" id="1_hf3go"]
 [ext_resource type="Shader" uid="uid://uul65wv728gy" path="res://interface/menus/floating_button.gdshader" id="1_i4ec3"]
 [ext_resource type="AudioStream" uid="uid://fgotafgtpxor" path="res://interface/menus/sounds/hover.wav" id="2_kdkxd"]
 [ext_resource type="AudioStream" uid="uid://by13jyerh6vaq" path="res://interface/menus/sounds/bloody punch button sound.mp3" id="3_x5gf3"]

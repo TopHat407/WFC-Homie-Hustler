@@ -5,6 +5,8 @@ extends CanvasLayer
 @onready var winlosescreen: TextureRect = $Control/TextureRect
 @onready var winlosetext: Label = $Control/TextureRect/Label
 
+var gameover = false
+
 signal win
 signal lose
 
@@ -15,14 +17,16 @@ func _ready() -> void:
 	%Player.hit_player.connect(on_player_hit)
 
 func _physics_process(delta: float) -> void:
-	if cpu_health.value <= 0:
+	if cpu_health.value <= 0 and gameover == false:
 		win.emit()
 		winlosetext.text = "YOU WIN!"
 		game_over()
-	elif player_health.value <= 0:
+		gameover = true
+	elif player_health.value <= 0 and gameover == false:
 		lose.emit()
 		winlosetext.text = "YOU LOSE..."
 		game_over()
+		gameover = true
 
 func on_player_hit():
 	player_health.value -= 10

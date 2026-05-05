@@ -16,14 +16,16 @@ const HOVER_SCALE: Vector2 = Vector2(1.05,1.05)
 @onready var hover_audio_player: AudioStreamPlayer = $Hover
 @onready var pressed_audio_player: AudioStreamPlayer = $Pressed
 @onready var released_audio_player: AudioStreamPlayer = $Released
+@onready var label: Label = $Label
 
-
+@export var labeltext : String
 
 signal button_up
 signal activated
 
 
 func _ready():
+	label.text = labeltext
 	if disable_sound:
 		hover_audio_player.stream = null
 		pressed_audio_player.stream = null

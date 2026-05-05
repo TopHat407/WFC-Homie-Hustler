@@ -30,8 +30,8 @@ func physics_update(_delta: float) -> void:
 
 
 func _on_player_playerlose() -> void:
-	player.win = true
+	player.lose = true
 
 
 func _on_player_playerwin() -> void:
-	player.lose = true
+	player.win = true
