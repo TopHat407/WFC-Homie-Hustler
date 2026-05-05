@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxm1rssnbwwu4"
+path="res://.godot/imported/button pressed.mp3-6b11c6172a632524cab1de72fe06b7c2.mp3str"
+
+[deps]
+
+source_file="res://interface/menus/sounds/button pressed.mp3"
+dest_files=["res://.godot/imported/button pressed.mp3-6b11c6172a632524cab1de72fe06b7c2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

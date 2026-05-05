@@ -6,7 +6,8 @@ const BACKWARD = "Backward"
 const JUMPING = "Jumping"
 const FALLING = "Falling"
 const ATTACKING = "Attacking"
-const SPECIAL = "Special"
+const NEUTRAL_SPECIAL = "Neutral_Special"
+const FORWARD_SPECIAL = "Forward_Special"
 
 var player: Player
 

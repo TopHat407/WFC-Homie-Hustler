@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://surbgr0d3gxv" path="res://entities/characters/debug test character/assets/Player Jab 48x48.png" id="3_1m6a1"]
 [ext_resource type="Texture2D" uid="uid://b56iyouc3u6mr" path="res://entities/characters/debug test character/assets/player jump 48x48.png" id="4_1yh1r"]
 [ext_resource type="Texture2D" uid="uid://b0knwrnr4vydw" path="res://entities/characters/debug test character/assets/Player Idle 48x48.png" id="4_sd0mn"]
+[ext_resource type="Texture2D" uid="uid://bi3rtjaddehqa" path="res://entities/characters/debug test character/assets/player katana attack-sheathe 80x64.png" id="5_a3nbc"]
 [ext_resource type="Texture2D" uid="uid://c14e8yho2xegu" path="res://entities/characters/debug test character/assets/player run 48x48.png" id="5_noa2c"]
 [ext_resource type="Script" uid="uid://bicnrrrm02etf" path="res://state machine/main state machine scripts/State Machine.gd" id="6_7ggwk"]
 [ext_resource type="Script" uid="uid://c6ovw8lepqn4f" path="res://state machine/states/idle.gd" id="7_f3unh"]
@@ -15,6 +16,7 @@
 [ext_resource type="Script" uid="uid://dkaii51ywri5d" path="res://state machine/states/attacking.gd" id="12_1m6a1"]
 [ext_resource type="Script" uid="uid://go0c2esy735p" path="res://state machine/states/special.gd" id="13_sd0mn"]
 [ext_resource type="Script" uid="uid://xekgen64y26s" path="res://state machine/states/backward.gd" id="15_7ggwk"]
+[ext_resource type="Script" uid="uid://pfvqg3itexws" path="res://state machine/states/forward_special.gd" id="15_f3unh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xjrkv"]
 atlas = ExtResource("3_1m6a1")
@@ -75,6 +77,46 @@ region = Rect2(240, 0, 48, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_1yh1r"]
 atlas = ExtResource("4_1yh1r")
 region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20rm1"]
+atlas = ExtResource("5_a3nbc")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_er2t7"]
+atlas = ExtResource("5_a3nbc")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uieic"]
+atlas = ExtResource("5_a3nbc")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgodn"]
+atlas = ExtResource("5_a3nbc")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_reucb"]
+atlas = ExtResource("5_a3nbc")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmslp"]
+atlas = ExtResource("5_a3nbc")
+region = Rect2(400, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5e4sf"]
+atlas = ExtResource("5_a3nbc")
+region = Rect2(480, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffh11"]
+atlas = ExtResource("5_a3nbc")
+region = Rect2(560, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0ep1"]
+atlas = ExtResource("5_a3nbc")
+region = Rect2(640, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uqnv"]
+atlas = ExtResource("5_a3nbc")
+region = Rect2(720, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a5wcq"]
 atlas = ExtResource("4_sd0mn")
@@ -252,6 +294,41 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_20rm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_er2t7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uieic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgodn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_reucb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmslp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5e4sf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffh11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0ep1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uqnv")
+}],
+"loop": false,
+"name": &"forward_special",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_a5wcq")
 }, {
 "duration": 1.0,
@@ -370,7 +447,7 @@ jump_impulse = 300.0
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qv8fh")
-animation = &"attack"
+animation = &"forward_special"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1191701007]
@@ -396,8 +473,25 @@ script = ExtResource("10_u0c8f")
 [node name="Attacking" type="Node" parent="StateMachine" unique_id=381689999]
 script = ExtResource("12_1m6a1")
 
-[node name="Special" type="Node" parent="StateMachine" unique_id=1015248585]
-script = ExtResource("13_sd0mn")
-
 [node name="Backward" type="Node" parent="StateMachine" unique_id=1663359928]
 script = ExtResource("15_7ggwk")
+
+[node name="Neutral Air" type="Node" parent="StateMachine" unique_id=1732761154]
+
+[node name="Forward Air" type="Node" parent="StateMachine" unique_id=26639325]
+
+[node name="Up Air" type="Node" parent="StateMachine" unique_id=259762709]
+
+[node name="Down Air" type="Node" parent="StateMachine" unique_id=1434885965]
+
+[node name="Back Air" type="Node" parent="StateMachine" unique_id=2014079626]
+
+[node name="Forward_Special" type="Node" parent="StateMachine" unique_id=1143055669]
+script = ExtResource("15_f3unh")
+
+[node name="Neutral_Special" type="Node" parent="StateMachine" unique_id=1015248585]
+script = ExtResource("13_sd0mn")
+
+[node name="Up Special" type="Node" parent="StateMachine" unique_id=266580426]
+
+[node name="Down Special" type="Node" parent="StateMachine" unique_id=1512894647]
