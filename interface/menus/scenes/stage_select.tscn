@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cp3yx2coekjnm"]
+
+[ext_resource type="Script" uid="uid://bclrrriw43psa" path="res://interface/menus/scripts/stage_select.gd" id="1_5dmii"]
+[ext_resource type="Texture2D" uid="uid://b7u4jnlni3m5r" path="res://interface/menus/assets/Prototype Stage UI.png" id="1_fdixb"]
+[ext_resource type="Texture2D" uid="uid://c800kanoxhwp8" path="res://interface/menus/assets/Locked Stage UI.png" id="2_6i14v"]
+[ext_resource type="Texture2D" uid="uid://dwfrjms2frgmr" path="res://interface/menus/assets/Prototype Stage UI Pressed.png" id="2_060h0"]
+[ext_resource type="Texture2D" uid="uid://f8guj2rqtwsp" path="res://interface/menus/assets/Prototype Stage UI Hover.png" id="3_5dmii"]
+[ext_resource type="Texture2D" uid="uid://dgia6px1cmjfm" path="res://interface/menus/assets/Locked Stage UI Pressed.png" id="5_0dktv"]
+[ext_resource type="Texture2D" uid="uid://bkrawpaajl5kh" path="res://interface/menus/assets/Locked Stage UI Hover.png" id="6_ykam8"]
+
+[node name="StageSelect" type="CanvasLayer" unique_id=1503700667]
+script = ExtResource("1_5dmii")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1886424825]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -488.0
+offset_top = -192.0
+offset_right = 488.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Stage1" type="TextureButton" parent="HBoxContainer" unique_id=1665666238]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath("../Stage5")
+texture_normal = ExtResource("1_fdixb")
+texture_pressed = ExtResource("2_060h0")
+texture_hover = ExtResource("3_5dmii")
+texture_focused = ExtResource("3_5dmii")
+
+[node name="Stage2" type="TextureButton" parent="HBoxContainer" unique_id=2066102530]
+layout_mode = 2
+texture_normal = ExtResource("2_6i14v")
+texture_pressed = ExtResource("5_0dktv")
+texture_hover = ExtResource("6_ykam8")
+texture_focused = ExtResource("6_ykam8")
+
+[node name="Stage3" type="TextureButton" parent="HBoxContainer" unique_id=322700423]
+layout_mode = 2
+texture_normal = ExtResource("2_6i14v")
+texture_pressed = ExtResource("5_0dktv")
+texture_hover = ExtResource("6_ykam8")
+texture_focused = ExtResource("6_ykam8")
+
+[node name="Stage4" type="TextureButton" parent="HBoxContainer" unique_id=1940305029]
+layout_mode = 2
+texture_normal = ExtResource("2_6i14v")
+texture_pressed = ExtResource("5_0dktv")
+texture_hover = ExtResource("6_ykam8")
+texture_focused = ExtResource("6_ykam8")
+
+[node name="Stage5" type="TextureButton" parent="HBoxContainer" unique_id=1010206366]
+layout_mode = 2
+focus_neighbor_right = NodePath("../Stage1")
+texture_normal = ExtResource("2_6i14v")
+texture_pressed = ExtResource("5_0dktv")
+texture_hover = ExtResource("6_ykam8")
+texture_focused = ExtResource("6_ykam8")
+
+[connection signal="pressed" from="HBoxContainer/Stage1" to="." method="_on_stage_1_pressed"]

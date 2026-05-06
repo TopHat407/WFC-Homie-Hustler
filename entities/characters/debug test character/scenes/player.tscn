@@ -585,6 +585,7 @@ animation = &"win"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1191701007]
+visible = false
 position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_veh22")
 
@@ -639,6 +640,7 @@ script = ExtResource("19_kv47l")
 metadata/_custom_type_script = "uid://bg4o10x76yv3q"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=583680557]
+visible = false
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=290581358]

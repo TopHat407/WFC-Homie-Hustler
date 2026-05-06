@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://v38u6o201q60"]
+
+[ext_resource type="Script" uid="uid://cdx71d2c806i8" path="res://interface/menus/scripts/character_select.gd" id="1_fyih3"]
+[ext_resource type="Texture2D" uid="uid://c6pg8rsplwl0b" path="res://interface/menus/assets/Prototype Character UI.png" id="1_yudta"]
+[ext_resource type="Texture2D" uid="uid://dh3ewn741liku" path="res://interface/menus/assets/Locked Character UI.png" id="2_a7fhx"]
+[ext_resource type="Texture2D" uid="uid://dqmvacnnfggwt" path="res://interface/menus/assets/Prototype Character UI Pressed.png" id="2_vm4e8"]
+[ext_resource type="Texture2D" uid="uid://dmof5abhlapnh" path="res://interface/menus/assets/Prototype Character UI Hover.png" id="3_fyih3"]
+[ext_resource type="Texture2D" uid="uid://e5ys8dgqsb6v" path="res://interface/menus/assets/Locked Character UI Pressed.png" id="5_33wcn"]
+[ext_resource type="Texture2D" uid="uid://dlmaa2yxixpr5" path="res://interface/menus/assets/Locked Character UI Hover.png" id="6_gl8y2"]
+
+[node name="CharacterSelect" type="CanvasLayer" unique_id=1424743061]
+script = ExtResource("1_fyih3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1258976117]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -292.0
+offset_top = 31.0
+offset_right = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1996477744]
+layout_mode = 2
+
+[node name="Character1" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=1961550546]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath("../Character3")
+focus_neighbor_top = NodePath("../../HBoxContainer3/Character7")
+focus_neighbor_right = NodePath("../Character2")
+focus_neighbor_bottom = NodePath("../../HBoxContainer2/Character4")
+focus_next = NodePath("../Character2")
+focus_previous = NodePath("../../HBoxContainer3/Character9")
+texture_normal = ExtResource("1_yudta")
+texture_pressed = ExtResource("2_vm4e8")
+texture_hover = ExtResource("3_fyih3")
+texture_focused = ExtResource("3_fyih3")
+
+[node name="Character2" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=1491085784]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Character1")
+focus_neighbor_top = NodePath("../../HBoxContainer3/Character8")
+focus_neighbor_right = NodePath("../Character3")
+focus_neighbor_bottom = NodePath("../../HBoxContainer2/Character5")
+focus_next = NodePath("../Character3")
+focus_previous = NodePath("../Character1")
+texture_normal = ExtResource("2_a7fhx")
+texture_pressed = ExtResource("5_33wcn")
+texture_hover = ExtResource("6_gl8y2")
+texture_focused = ExtResource("6_gl8y2")
+
+[node name="Character3" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=1807564678]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../HBoxContainer3/Character9")
+focus_neighbor_right = NodePath("../Character1")
+texture_normal = ExtResource("2_a7fhx")
+texture_pressed = ExtResource("5_33wcn")
+texture_hover = ExtResource("6_gl8y2")
+texture_focused = ExtResource("6_gl8y2")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1031005586]
+layout_mode = 2
+
+[node name="Character4" type="TextureButton" parent="VBoxContainer/HBoxContainer2" unique_id=321109965]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Character6")
+texture_normal = ExtResource("2_a7fhx")
+texture_pressed = ExtResource("5_33wcn")
+texture_hover = ExtResource("6_gl8y2")
+texture_focused = ExtResource("6_gl8y2")
+
+[node name="Character5" type="TextureButton" parent="VBoxContainer/HBoxContainer2" unique_id=1914675996]
+layout_mode = 2
+texture_normal = ExtResource("2_a7fhx")
+texture_pressed = ExtResource("5_33wcn")
+texture_hover = ExtResource("6_gl8y2")
+texture_focused = ExtResource("6_gl8y2")
+
+[node name="Character6" type="TextureButton" parent="VBoxContainer/HBoxContainer2" unique_id=214676399]
+layout_mode = 2
+focus_neighbor_right = NodePath("../Character4")
+texture_normal = ExtResource("2_a7fhx")
+texture_pressed = ExtResource("5_33wcn")
+texture_hover = ExtResource("6_gl8y2")
+texture_focused = ExtResource("6_gl8y2")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=2105645599]
+layout_mode = 2
+
+[node name="Character7" type="TextureButton" parent="VBoxContainer/HBoxContainer3" unique_id=44101427]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Character9")
+focus_neighbor_bottom = NodePath("../../HBoxContainer/Character1")
+texture_normal = ExtResource("2_a7fhx")
+texture_pressed = ExtResource("5_33wcn")
+texture_hover = ExtResource("6_gl8y2")
+texture_focused = ExtResource("6_gl8y2")
+
+[node name="Character8" type="TextureButton" parent="VBoxContainer/HBoxContainer3" unique_id=1717450740]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../../HBoxContainer/Character2")
+texture_normal = ExtResource("2_a7fhx")
+texture_pressed = ExtResource("5_33wcn")
+texture_hover = ExtResource("6_gl8y2")
+texture_focused = ExtResource("6_gl8y2")
+
+[node name="Character9" type="TextureButton" parent="VBoxContainer/HBoxContainer3" unique_id=1652019436]
+layout_mode = 2
+focus_neighbor_right = NodePath("../Character7")
+focus_neighbor_bottom = NodePath("../../HBoxContainer/Character3")
+texture_normal = ExtResource("2_a7fhx")
+texture_pressed = ExtResource("5_33wcn")
+texture_hover = ExtResource("6_gl8y2")
+texture_focused = ExtResource("6_gl8y2")
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Character1" to="." method="_on_character_1_pressed"]
