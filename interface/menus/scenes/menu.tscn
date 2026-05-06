@@ -16,6 +16,10 @@ region = Rect2(0, 60.000008, 288, 48.799988)
 atlas = ExtResource("3_1eaoj")
 region = Rect2(0, 117.6, 288, 50.4)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1rot"]
+atlas = ExtResource("3_1eaoj")
+region = Rect2(0, 118.4, 288, 50.399986)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_f43l8"]
 atlas = ExtResource("3_1eaoj")
 region = Rect2(0, 0, 288, 47.200005)
@@ -28,6 +32,10 @@ region = Rect2(0, 60.800003, 288, 47.200005)
 atlas = ExtResource("3_1eaoj")
 region = Rect2(0, 119.200005, 288, 49.599983)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_is23q"]
+atlas = ExtResource("3_1eaoj")
+region = Rect2(0, 119.200005, 288, 48.000008)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_s1mcy"]
 atlas = ExtResource("3_1eaoj")
 region = Rect2(0, 0, 288, 48.000008)
@@ -39,6 +47,10 @@ region = Rect2(0, 62.4, 288, 46.399994)
 [sub_resource type="AtlasTexture" id="AtlasTexture_pji8c"]
 atlas = ExtResource("3_1eaoj")
 region = Rect2(0, 119.200005, 288, 48.799995)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1eaoj"]
+atlas = ExtResource("3_1eaoj")
+region = Rect2(0, 120.00001, 288, 47.999992)
 
 [node name="Menu" type="CanvasLayer" unique_id=2022974063]
 script = ExtResource("1_a1rot")
@@ -66,22 +78,32 @@ offset_right = 319.0
 grow_vertical = 2
 
 [node name="StartButton" type="TextureButton" parent="MenuButtons" unique_id=91322048]
+unique_name_in_owner = true
 layout_mode = 2
+focus_neighbor_top = NodePath("../QuitButton")
+focus_neighbor_bottom = NodePath("../SettingsButton")
 texture_normal = SubResource("AtlasTexture_yetup")
 texture_pressed = SubResource("AtlasTexture_fll0l")
 texture_hover = SubResource("AtlasTexture_7n11x")
+texture_focused = SubResource("AtlasTexture_a1rot")
 
 [node name="SettingsButton" type="TextureButton" parent="MenuButtons" unique_id=1125819620]
 layout_mode = 2
+focus_neighbor_top = NodePath("../StartButton")
+focus_neighbor_bottom = NodePath("../QuitButton")
 texture_normal = SubResource("AtlasTexture_f43l8")
 texture_pressed = SubResource("AtlasTexture_i0nej")
 texture_hover = SubResource("AtlasTexture_m3wix")
+texture_focused = SubResource("AtlasTexture_is23q")
 
 [node name="QuitButton" type="TextureButton" parent="MenuButtons" unique_id=1754081680]
 layout_mode = 2
+focus_neighbor_top = NodePath("../SettingsButton")
+focus_neighbor_bottom = NodePath("../StartButton")
 texture_normal = SubResource("AtlasTexture_s1mcy")
 texture_pressed = SubResource("AtlasTexture_d0dtg")
 texture_hover = SubResource("AtlasTexture_pji8c")
+texture_focused = SubResource("AtlasTexture_1eaoj")
 
 [connection signal="pressed" from="MenuButtons/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MenuButtons/SettingsButton" to="." method="_on_settings_button_pressed"]

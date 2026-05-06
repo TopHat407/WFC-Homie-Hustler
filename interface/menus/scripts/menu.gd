@@ -1,6 +1,8 @@
 extends CanvasLayer
 
 
+func _ready() -> void:
+	%StartButton.call_deferred("grab_focus")
 
 func _on_start_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://levels/test_scenes/2d_test_scene.tscn")
