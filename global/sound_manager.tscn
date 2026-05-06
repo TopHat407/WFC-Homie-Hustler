@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://egfxwdbqh3uf"]
+
+[ext_resource type="AudioStream" uid="uid://01tnpx4qnyv4" path="res://assets/sounds and music/Homie Hustler Title Screen.mp3" id="1_klwgq"]
+[ext_resource type="Script" uid="uid://dnidkshig1esu" path="res://global/sound_manager.gd" id="2_ilgwi"]
+
+[node name="SoundManager" type="AudioStreamPlayer" unique_id=786857456]
+stream = ExtResource("1_klwgq")
+autoplay = true
+script = ExtResource("2_ilgwi")

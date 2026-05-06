@@ -2,6 +2,7 @@ extends CanvasLayer
 
 
 func _ready() -> void:
+	globals.playmusic.emit()
 	%StartButton.call_deferred("grab_focus")
 
 func _on_start_button_pressed() -> void:

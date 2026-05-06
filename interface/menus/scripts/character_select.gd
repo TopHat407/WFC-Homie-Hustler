@@ -1,4 +1,4 @@
-extends CanvasLayer
+class_name characterselect extends CanvasLayer
 
 signal character1
 
