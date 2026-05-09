@@ -1,0 +1,10 @@
+extends PlayerState
+
+func enter(previous_state_path: String, data := {}) -> void:
+	player.animation_player.play("down_air")
+
+func physics_update(_delta: float) -> void:
+	var input_direction_x := Input.get_axis("left", "right")
+	await player.animation_player.animation_finished
+	if player.velocity.y >= 0:
+		finished.emit(FALLING)

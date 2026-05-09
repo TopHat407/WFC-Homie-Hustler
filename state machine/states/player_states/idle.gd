@@ -17,10 +17,26 @@ func physics_update(_delta: float) -> void:
 		finished.emit(FORWARD)
 	elif Input.is_action_pressed("left"):
 		finished.emit(BACKWARD)
+	elif Input.is_action_pressed("down"):
+		finished.emit(CROUCH)
 	elif Input.is_action_just_pressed("X"):
 		finished.emit(ATTACKING)
+	elif Input.is_action_pressed("down"):
+		if Input.is_action_just_pressed("B"):
+			finished.emit(DOWN_SPECIAL)
+	elif Input.is_action_pressed("up"):
+		if Input.is_action_just_pressed("B"):
+			finished.emit(UP_SPECIAL)
 	elif Input.is_action_just_pressed("B"):
 		finished.emit(NEUTRAL_SPECIAL)
+
+
+
+
+
+
+
+
 	elif player.win == true:
 		finished.emit(WIN)
 	elif player.lose == true:

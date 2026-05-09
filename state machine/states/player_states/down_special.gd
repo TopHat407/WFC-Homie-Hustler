@@ -1,9 +1,11 @@
 extends PlayerState
 
+
+
 func enter(previous_state_path: String, data := {}) -> void:
 	if player.is_on_floor():
 		player.velocity.x = 0.0
-	player.animation_player.play("forward_special")
+	player.animation_player.play("down_special")
 
 func physics_update(_delta: float) -> void:
 	var input_direction_x := Input.get_axis("left", "right")
@@ -20,13 +22,3 @@ func physics_update(_delta: float) -> void:
 		finished.emit(WIN)
 	elif player.lose == true:
 		finished.emit(LOSE)
-
-
-
-
-func _on_player_playerlose() -> void:
-	player.lose = true
-
-
-func _on_player_playerwin() -> void:
-	player.win = true
