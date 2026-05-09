@@ -1,7 +1,7 @@
 extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
-	player.animation_player.play("run")
+	player.animation_player.play("forward_walk")
 
 func physics_update(delta: float) -> void:
 	var input_direction_x := Input.is_action_pressed("right")

@@ -3,7 +3,7 @@ extends PlayerState
 func enter(previous_state_path: String, data := {}) -> void:
 	if player.is_on_floor():
 		player.velocity.x = 0.0
-	player.animation_player.play("special")
+	player.animation_player.play("neutral_special")
 
 func physics_update(_delta: float) -> void:
 	var input_direction_x := Input.get_axis("left", "right")
