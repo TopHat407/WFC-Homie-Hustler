@@ -1,3 +1,47 @@
 [gd_scene format=3 uid="uid://bwxbhtihvs236"]
 
+[ext_resource type="Texture2D" uid="uid://c800kanoxhwp8" path="res://interface/menus/assets/Locked Stage UI.png" id="1_0rs3o"]
+[ext_resource type="Texture2D" uid="uid://dgia6px1cmjfm" path="res://interface/menus/assets/Locked Stage UI Pressed.png" id="2_li33t"]
+[ext_resource type="Texture2D" uid="uid://bkrawpaajl5kh" path="res://interface/menus/assets/Locked Stage UI Hover.png" id="3_a5i74"]
+
 [node name="GameMenu" type="CanvasLayer" unique_id=313921959]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=737805750]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -192.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer" unique_id=1558766630]
+layout_mode = 2
+texture_normal = ExtResource("1_0rs3o")
+texture_pressed = ExtResource("2_li33t")
+texture_hover = ExtResource("3_a5i74")
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer" unique_id=591478951]
+layout_mode = 2
+texture_normal = ExtResource("1_0rs3o")
+texture_pressed = ExtResource("2_li33t")
+texture_hover = ExtResource("3_a5i74")
+
+[node name="TextureButton3" type="TextureButton" parent="HBoxContainer" unique_id=159440146]
+layout_mode = 2
+texture_normal = ExtResource("1_0rs3o")
+texture_pressed = ExtResource("2_li33t")
+texture_hover = ExtResource("3_a5i74")
+
+[node name="TextureButton4" type="TextureButton" parent="HBoxContainer" unique_id=912419020]
+layout_mode = 2
+texture_normal = ExtResource("1_0rs3o")
+texture_pressed = ExtResource("2_li33t")
+texture_hover = ExtResource("3_a5i74")
+
+[node name="TextureButton5" type="TextureButton" parent="HBoxContainer" unique_id=275746298]
+layout_mode = 2
+texture_normal = ExtResource("1_0rs3o")
+texture_pressed = ExtResource("2_li33t")
+texture_hover = ExtResource("3_a5i74")

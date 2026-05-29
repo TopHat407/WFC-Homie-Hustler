@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 globals="*uid://cjmnkcktt1rw0"
 SoundManager="*uid://egfxwdbqh3uf"
-TransitionManager="*uid://bigiub1kirxxf"
+TransitionManager="*uid://uxovd4q6gpwy"
 
 [display]
 

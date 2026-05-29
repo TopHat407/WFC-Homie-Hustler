@@ -20,7 +20,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_24qkg"]
 resource_name = "fade in"
 length = 0.5
-loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -57,8 +56,13 @@ _data = {
 &"fade out": SubResource("Animation_xngsk")
 }
 
-[node name="TransitionManager" type="Node2D" unique_id=1009131800]
+[node name="TransitionManager" type="CanvasLayer" unique_id=1233106052]
+layer = 12
 script = ExtResource("1_i8tag")
+
+[node name="anim" type="AnimationPlayer" parent="." unique_id=429246620]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_fcb0w")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=897337928]
 anchors_preset = 15
@@ -67,7 +71,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
-
-[node name="anim" type="AnimationPlayer" parent="." unique_id=429246620]
-unique_name_in_owner = true
-libraries/ = SubResource("AnimationLibrary_fcb0w")

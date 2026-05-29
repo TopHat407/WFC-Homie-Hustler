@@ -2,25 +2,10 @@
 
 [ext_resource type="Script" uid="uid://brj81x4q7jm2j" path="res://interface/menus/scripts/menu.gd" id="1_a1rot"]
 [ext_resource type="Texture2D" uid="uid://cyabk7tlpi03m" path="res://assets/Miscellaneous  Art/WFC Homie Hustler Title Screen.png" id="2_2l8xn"]
-[ext_resource type="PackedScene" uid="uid://uxovd4q6gpwy" path="res://interface/menus/scenes/transition_manager.tscn" id="4_1eaoj"]
 [ext_resource type="FontFile" uid="uid://bq3jv7yoboe21" path="res://assets/fonts/Cheltenham Condensed Bold.ttf" id="4_is23q"]
 
 [node name="Menu" type="CanvasLayer" unique_id=2022974063]
 script = ExtResource("1_a1rot")
-
-[node name="Sprite2D" type="TextureRect" parent="." unique_id=230436049]
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -577.0
-offset_right = 1354.6768
-offset_bottom = 445.54224
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.59947914, 0.59074074)
-texture = ExtResource("2_2l8xn")
-expand_mode = 1
 
 [node name="Label" type="Label" parent="." unique_id=1537123968]
 modulate = Color(1, 1, 1, 0)
@@ -42,6 +27,16 @@ text = "Press Any Button"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TransitionManager" parent="." unique_id=39876356 instance=ExtResource("4_1eaoj")]
-
-[editable path="TransitionManager"]
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=230436049]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -577.0
+offset_right = 1354.6768
+offset_bottom = 445.54224
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.59947914, 0.59074074)
+texture = ExtResource("2_2l8xn")
+expand_mode = 1

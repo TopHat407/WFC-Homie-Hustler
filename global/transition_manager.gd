@@ -1,3 +1,3 @@
-extends Node2D
+extends CanvasLayer
 
 @onready var anim: AnimationPlayer = %anim
