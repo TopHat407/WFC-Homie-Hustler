@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpjifm4r2wl8n"
-path="res://.godot/imported/Win Lose.png-ae3804977346ead7798485df8897832b.ctex"
+uid="uid://c6d08y6feyh1y"
+path="res://.godot/imported/Locked Character Select.png-d83f8f588ee66dfa3c4fefcc996b56dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Win Lose.png"
-dest_files=["res://.godot/imported/Win Lose.png-ae3804977346ead7798485df8897832b.ctex"]
+source_file="res://interface/menus/assets/Locked Character Select.png"
+dest_files=["res://.godot/imported/Locked Character Select.png-d83f8f588ee66dfa3c4fefcc996b56dc.ctex"]
 
 [params]
 

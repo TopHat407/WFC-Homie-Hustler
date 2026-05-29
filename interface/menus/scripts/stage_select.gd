@@ -1,9 +1,17 @@
 class_name stageselect extends CanvasLayer
 
+@onready var texture_rect: TextureRect = %TextureRect
+
 
 
 func _ready() -> void:
 	%Stage1.call_deferred("grab_focus")
+
+func _physics_process(delta: float) -> void:
+	if %Stage1.has_focus():
+		texture_rect.texture = load("res://levels/test_scenes/assets/debug_level.png")
+	else:
+		texture_rect.texture = load("res://interface/menus/assets/Locked Stage Background.png")
 
 func _on_stage_1_pressed() -> void:
 	globals.stage1.emit()

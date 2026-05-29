@@ -1,57 +1,9 @@
 [gd_scene format=3 uid="uid://bri2dpr2ks4v4"]
 
 [ext_resource type="Script" uid="uid://brj81x4q7jm2j" path="res://interface/menus/scripts/menu.gd" id="1_a1rot"]
-[ext_resource type="Texture2D" uid="uid://d3lj340lql0b2" path="res://assets/Miscellaneous  Art/Menu Screen.png" id="2_is23q"]
-[ext_resource type="Texture2D" uid="uid://bxurljx4k7dcv" path="res://interface/menus/assets/buttons.png" id="3_1eaoj"]
+[ext_resource type="Texture2D" uid="uid://cyabk7tlpi03m" path="res://assets/Miscellaneous  Art/WFC Homie Hustler Title Screen.png" id="2_2l8xn"]
+[ext_resource type="PackedScene" uid="uid://uxovd4q6gpwy" path="res://interface/menus/scenes/transition_manager.tscn" id="4_1eaoj"]
 [ext_resource type="FontFile" uid="uid://bq3jv7yoboe21" path="res://assets/fonts/Cheltenham Condensed Bold.ttf" id="4_is23q"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yetup"]
-atlas = ExtResource("3_1eaoj")
-region = Rect2(0, 0, 288, 48.800003)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fll0l"]
-atlas = ExtResource("3_1eaoj")
-region = Rect2(0, 60.000008, 288, 48.799988)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7n11x"]
-atlas = ExtResource("3_1eaoj")
-region = Rect2(0, 117.6, 288, 50.4)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a1rot"]
-atlas = ExtResource("3_1eaoj")
-region = Rect2(0, 118.4, 288, 50.399986)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f43l8"]
-atlas = ExtResource("3_1eaoj")
-region = Rect2(0, 0, 288, 47.200005)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i0nej"]
-atlas = ExtResource("3_1eaoj")
-region = Rect2(0, 60.800003, 288, 47.200005)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m3wix"]
-atlas = ExtResource("3_1eaoj")
-region = Rect2(0, 119.200005, 288, 49.599983)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_is23q"]
-atlas = ExtResource("3_1eaoj")
-region = Rect2(0, 119.200005, 288, 48.000008)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s1mcy"]
-atlas = ExtResource("3_1eaoj")
-region = Rect2(0, 0, 288, 48.000008)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d0dtg"]
-atlas = ExtResource("3_1eaoj")
-region = Rect2(0, 62.4, 288, 46.399994)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pji8c"]
-atlas = ExtResource("3_1eaoj")
-region = Rect2(0, 119.200005, 288, 48.799995)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1eaoj"]
-atlas = ExtResource("3_1eaoj")
-region = Rect2(0, 120.00001, 288, 47.999992)
 
 [node name="Menu" type="CanvasLayer" unique_id=2022974063]
 script = ExtResource("1_a1rot")
@@ -67,84 +19,29 @@ offset_bottom = 445.54224
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.59947914, 0.59074074)
-texture = ExtResource("2_is23q")
+texture = ExtResource("2_2l8xn")
 expand_mode = 1
 
-[node name="MenuButtons" type="VBoxContainer" parent="." unique_id=1893950329]
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 31.0
-offset_top = 318.0
-offset_right = 319.0
-grow_vertical = 2
-
-[node name="StartButton" type="TextureButton" parent="MenuButtons" unique_id=91322048]
-unique_name_in_owner = true
-layout_mode = 2
-focus_neighbor_top = NodePath("../QuitButton")
-focus_neighbor_bottom = NodePath("../SettingsButton")
-texture_normal = SubResource("AtlasTexture_yetup")
-texture_pressed = SubResource("AtlasTexture_fll0l")
-texture_hover = SubResource("AtlasTexture_7n11x")
-texture_focused = SubResource("AtlasTexture_a1rot")
-
-[node name="START" type="Label" parent="MenuButtons/StartButton" unique_id=402516468]
-layout_mode = 1
-anchors_preset = 15
+[node name="Label" type="Label" parent="." unique_id=1537123968]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -224.0
+offset_right = -1.0
+offset_bottom = -188.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.45995867, 0.45995867, 0.4599586, 1)
 theme_override_fonts/font = ExtResource("4_is23q")
-theme_override_font_sizes/font_size = 32
-text = "START"
+theme_override_font_sizes/font_size = 26
+text = "Press Any Button"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SettingsButton" type="TextureButton" parent="MenuButtons" unique_id=1125819620]
-layout_mode = 2
-focus_neighbor_top = NodePath("../StartButton")
-focus_neighbor_bottom = NodePath("../QuitButton")
-texture_normal = SubResource("AtlasTexture_f43l8")
-texture_pressed = SubResource("AtlasTexture_i0nej")
-texture_hover = SubResource("AtlasTexture_m3wix")
-texture_focused = SubResource("AtlasTexture_is23q")
+[node name="TransitionManager" parent="." unique_id=39876356 instance=ExtResource("4_1eaoj")]
 
-[node name="SETTINGS" type="Label" parent="MenuButtons/SettingsButton" unique_id=1587217986]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("4_is23q")
-theme_override_font_sizes/font_size = 32
-text = "SETTINGS"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="QuitButton" type="TextureButton" parent="MenuButtons" unique_id=1754081680]
-layout_mode = 2
-focus_neighbor_top = NodePath("../SettingsButton")
-focus_neighbor_bottom = NodePath("../StartButton")
-texture_normal = SubResource("AtlasTexture_s1mcy")
-texture_pressed = SubResource("AtlasTexture_d0dtg")
-texture_hover = SubResource("AtlasTexture_pji8c")
-texture_focused = SubResource("AtlasTexture_1eaoj")
-
-[node name="QUIT" type="Label" parent="MenuButtons/QuitButton" unique_id=1815533014]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("4_is23q")
-theme_override_font_sizes/font_size = 32
-text = "QUIT"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[connection signal="pressed" from="MenuButtons/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="MenuButtons/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]
+[editable path="TransitionManager"]

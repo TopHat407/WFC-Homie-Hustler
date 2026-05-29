@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c40fiwmpvgu6" path="res://entities/characters/debug test character/scenes/player.tscn" id="6_csjpw"]
 [ext_resource type="Texture2D" uid="uid://t7opw8xb6okh" path="res://interface/combat_ui/assets/Empty Health.png" id="6_veh22"]
 [ext_resource type="Texture2D" uid="uid://i51mgbbplwx" path="res://interface/combat_ui/assets/Outline.png" id="7_nvmr7"]
-[ext_resource type="Texture2D" uid="uid://dpjifm4r2wl8n" path="res://assets/Win Lose.png" id="7_veh22"]
+[ext_resource type="Texture2D" uid="uid://dpjifm4r2wl8n" path="res://assets/Miscellaneous  Art/Win Lose.png" id="7_veh22"]
 [ext_resource type="FontFile" uid="uid://bq3jv7yoboe21" path="res://assets/fonts/Cheltenham Condensed Bold.ttf" id="8_4wvwl"]
 [ext_resource type="Script" uid="uid://v20lrkhshtng" path="res://levels/test_scenes/camera_2d.gd" id="8_nvmr7"]
 [ext_resource type="Texture2D" uid="uid://dihgg72iot33w" path="res://interface/combat_ui/assets/Full Health.png" id="8_s275g"]
