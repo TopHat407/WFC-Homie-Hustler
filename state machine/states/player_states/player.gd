@@ -1,6 +1,8 @@
 class_name Player extends CharacterBody2D
 
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
+@onready var sprite: AnimatedSprite2D = %sprite
+
 
 @export var speed := 100.0
 @export var gravity := 1000.0

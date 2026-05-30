@@ -8,6 +8,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("B"):
+		SoundManager.ButtonPlayer.stream = load("res://assets/sounds and music/833601__subquire__aggressive-button-tap-ui-tap-hit.wav")
+		SoundManager.ButtonPlayer.play()
 		TransitionManager.anim.play("fade in")
 		await TransitionManager.anim.animation_finished
 		get_tree().change_scene_to_file("res://interface/menus/scenes/game_menu.tscn")
@@ -22,6 +24,8 @@ func _physics_process(delta: float) -> void:
 		$Player1.texture = load("res://interface/menus/assets/buttons/character select/Locked Character UI Hover.png")
 
 func _on_character_1_pressed() -> void:
+	SoundManager.ButtonPlayer.stream = load("res://assets/sounds and music/833601__subquire__aggressive-button-tap-ui-tap-hit.wav")
+	SoundManager.ButtonPlayer.play()
 	character1.emit()
 	TransitionManager.anim.play("fade in")
 	await TransitionManager.anim.animation_finished

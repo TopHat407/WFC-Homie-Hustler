@@ -3,7 +3,9 @@ extends CanvasLayer
 @onready var label: Label = $Label
 
 func _ready() -> void:
-	globals.playmusic.emit()
+	SoundManager.stream = preload("res://assets/sounds and music/Homie Hustler Title Screen.mp3")
+	SoundManager.play()
+	TransitionManager.anim.play("fade out")
 	fade_in_and_out()
 
 func fade_in_and_out():
@@ -23,6 +25,9 @@ func fade_in_and_out():
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventJoypadButton:
+		SoundManager.ButtonPlayer.stream = load("res://assets/sounds and music/833601__subquire__aggressive-button-tap-ui-tap-hit.wav")
+		SoundManager.ButtonPlayer.play()
 		TransitionManager.anim.play("fade in")
 		await TransitionManager.anim.animation_finished
+		
 		get_tree().call_deferred("change_scene_to_file", "res://interface/menus/scenes/game_menu.tscn")

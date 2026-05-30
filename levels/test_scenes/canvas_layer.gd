@@ -4,6 +4,8 @@ extends CanvasLayer
 @onready var cpu_health: TextureProgressBar = %CPUHealth
 @onready var winlosescreen: TextureRect = $Control/TextureRect
 @onready var winlosetext: Label = $Control/TextureRect/Label
+@onready var player_icon: TextureRect = $Control/PlayerHealth/PlayerIcon
+@onready var cpu_icon: TextureRect = $Control/CPUHealth/CPUIcon
 
 var gameover = false
 
@@ -11,6 +13,8 @@ signal win
 signal lose
 
 func _ready() -> void:
+	player_icon.texture = preload("res://entities/characters/debug test character/assets/Player Portrait.png")
+	cpu_icon.texture = preload("res://entities/characters/debug test dummy/assets/Dummy Portrait.png")
 	player_health.value = 100
 	cpu_health.value = 100
 	%Dummy.hit_enemy.connect(on_enemy_hit)

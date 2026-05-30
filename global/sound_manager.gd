@@ -1,6 +1,7 @@
 class_name audio extends AudioStreamPlayer
 
 @onready var sound_manager: audio = $"."
+@onready var ButtonPlayer: AudioStreamPlayer = $ButtonPlayer
 
 
 func _ready() -> void:

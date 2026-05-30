@@ -22,17 +22,17 @@ func physics_update(delta: float) -> void:
 				finished.emit(FORWARD)
 			elif Input.is_action_pressed("left"):
 				finished.emit(BACKWARD)
-	elif Input.is_action_pressed("right"):
-		if Input.is_action_just_pressed("A"):
-			finished.emit(FORWARD_AIR)
-	elif Input.is_action_pressed("left"):
-		if Input.is_action_just_pressed("A"):
-			finished.emit(BACK_AIR)
-	elif Input.is_action_pressed("up"):
-		if Input.is_action_just_pressed("A"):
-			finished.emit(UP_AIR)
-	elif Input.is_action_pressed("down"):
-		if Input.is_action_just_pressed("A"):
-			finished.emit(DOWN_AIR)
-	elif Input.is_action_just_pressed("A"):
-			finished.emit(NEUTRAL_AIR)
+	#elif Input.is_action_pressed("right"):
+		#if Input.is_action_just_pressed("A"):
+			#finished.emit(FORWARD_AIR)
+	#elif Input.is_action_pressed("left"):
+		#if Input.is_action_just_pressed("A"):
+			#finished.emit(BACK_AIR)
+	#elif Input.is_action_pressed("up"):
+		#if Input.is_action_just_pressed("A"):
+			#finished.emit(UP_AIR)
+	#elif Input.is_action_pressed("down"):
+		#if Input.is_action_just_pressed("A"):
+			#finished.emit(DOWN_AIR)
+	#elif Input.is_action_just_pressed("A"):
+			#finished.emit(NEUTRAL_AIR)

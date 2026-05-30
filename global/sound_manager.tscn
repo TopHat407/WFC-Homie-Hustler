@@ -7,3 +7,5 @@
 stream = ExtResource("1_klwgq")
 autoplay = true
 script = ExtResource("2_ilgwi")
+
+[node name="ButtonPlayer" type="AudioStreamPlayer" parent="." unique_id=974348332]

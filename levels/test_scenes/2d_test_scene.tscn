@@ -32,6 +32,22 @@ scale = Vector2(44.565, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="debug_level/StaticBody2D" unique_id=802450660]
 shape = SubResource("RectangleShape2D_csjpw")
 
+[node name="StaticBody2D2" type="StaticBody2D" parent="debug_level" unique_id=1767717448]
+position = Vector2(174.43472, 304.9172)
+rotation = 1.5707964
+scale = Vector2(44.565, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="debug_level/StaticBody2D2" unique_id=1852187606]
+shape = SubResource("RectangleShape2D_csjpw")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="debug_level" unique_id=789391922]
+position = Vector2(730.26074, 282.49683)
+rotation = 1.5707964
+scale = Vector2(44.565, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="debug_level/StaticBody2D3" unique_id=103098060]
+shape = SubResource("RectangleShape2D_csjpw")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1569434249]
 position = Vector2(63.96, 31.195)
 anchor_mode = 0
@@ -59,12 +75,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 10.0
 offset_right = 10.0
+offset_bottom = -456.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 texture_under = ExtResource("6_veh22")
 texture_over = ExtResource("7_nvmr7")
 texture_progress = ExtResource("8_s275g")
+
+[node name="PlayerIcon" type="TextureRect" parent="Camera2D/CanvasLayer/Control/PlayerHealth" unique_id=1328989101]
+z_index = -4
+layout_mode = 0
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 182.0
+offset_bottom = 180.0
 
 [node name="CPUHealth" type="TextureProgressBar" parent="Camera2D/CanvasLayer/Control" unique_id=1898812118]
 unique_name_in_owner = true
@@ -80,6 +105,14 @@ scale = Vector2(-0.5, 0.5)
 texture_under = ExtResource("6_veh22")
 texture_over = ExtResource("7_nvmr7")
 texture_progress = ExtResource("8_s275g")
+
+[node name="CPUIcon" type="TextureRect" parent="Camera2D/CanvasLayer/Control/CPUHealth" unique_id=1012083939]
+z_index = -4
+layout_mode = 0
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 182.0
+offset_bottom = 180.0
 
 [node name="TextureRect" type="TextureRect" parent="Camera2D/CanvasLayer/Control" unique_id=2010571859]
 visible = false
