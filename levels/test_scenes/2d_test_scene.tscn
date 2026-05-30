@@ -102,11 +102,11 @@ vertical_alignment = 1
 
 [node name="Player" parent="." unique_id=1162202406 instance=ExtResource("6_csjpw")]
 unique_name_in_owner = true
-position = Vector2(100, 100)
+position = Vector2(100, 110)
 
 [node name="Dummy" parent="." unique_id=196554576 instance=ExtResource("10_utxc2")]
 unique_name_in_owner = true
-position = Vector2(197, 98)
+position = Vector2(197, 108)
 
 [node name="Reset Timer" type="Timer" parent="." unique_id=1817028596]
 wait_time = 3.0

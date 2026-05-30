@@ -1,47 +1,236 @@
 [gd_scene format=3 uid="uid://bwxbhtihvs236"]
 
-[ext_resource type="Texture2D" uid="uid://c800kanoxhwp8" path="res://interface/menus/assets/Locked Stage UI.png" id="1_0rs3o"]
-[ext_resource type="Texture2D" uid="uid://dgia6px1cmjfm" path="res://interface/menus/assets/Locked Stage UI Pressed.png" id="2_li33t"]
-[ext_resource type="Texture2D" uid="uid://bkrawpaajl5kh" path="res://interface/menus/assets/Locked Stage UI Hover.png" id="3_a5i74"]
+[ext_resource type="Script" uid="uid://botf8pnnae5mj" path="res://interface/menus/scripts/game_menu.gd" id="1_25804"]
+[ext_resource type="Texture2D" uid="uid://cyabk7tlpi03m" path="res://assets/Miscellaneous  Art/WFC Homie Hustler Title Screen.png" id="1_xphd3"]
+[ext_resource type="Texture2D" uid="uid://50ub7vvyorc5" path="res://interface/menus/assets/buttons/game menu/NETWORK.png" id="2_25804"]
+[ext_resource type="Texture2D" uid="uid://bqvkghyni61kt" path="res://interface/menus/assets/buttons/game menu/NETWORK Hover.png" id="3_aq5ni"]
+[ext_resource type="FontFile" uid="uid://bq3jv7yoboe21" path="res://assets/fonts/Cheltenham Condensed Bold.ttf" id="4_5210v"]
+[ext_resource type="Texture2D" uid="uid://ciknqahpjvvrr" path="res://interface/menus/assets/buttons/game menu/LOCAL.png" id="5_wqmhx"]
+[ext_resource type="Texture2D" uid="uid://b65pyk51ucqk5" path="res://interface/menus/assets/buttons/game menu/LOCAL Hover.png" id="6_tlgdv"]
+[ext_resource type="Texture2D" uid="uid://dicgbfeqbxrdp" path="res://interface/menus/assets/buttons/game menu/DOJO.png" id="7_vdste"]
+[ext_resource type="Texture2D" uid="uid://tpgmgd5uxnae" path="res://interface/menus/assets/buttons/game menu/DOJO Hover.png" id="8_7hiyl"]
+[ext_resource type="Texture2D" uid="uid://dbjmyyea2ctdm" path="res://interface/menus/assets/buttons/game menu/STORY.png" id="9_2rdlm"]
+[ext_resource type="Texture2D" uid="uid://dm52r2xfbl8gb" path="res://interface/menus/assets/buttons/game menu/STORY Hover.png" id="10_20i7e"]
+[ext_resource type="Texture2D" uid="uid://dweanb44tgon1" path="res://interface/menus/assets/buttons/game menu/QUIT.png" id="11_k42i2"]
+[ext_resource type="Texture2D" uid="uid://b48a643sqyths" path="res://interface/menus/assets/buttons/game menu/QUIT Hover.png" id="12_bg5q5"]
+[ext_resource type="Texture2D" uid="uid://cb1qpwhyq3a15" path="res://interface/menus/assets/buttons/game menu/CHECKMARK.png" id="14_7hiyl"]
+[ext_resource type="Texture2D" uid="uid://c5s4t5iji3t68" path="res://interface/menus/assets/buttons/game menu/CHECKMARK Pressed.png" id="15_2rdlm"]
+[ext_resource type="Texture2D" uid="uid://k816232rfhte" path="res://interface/menus/assets/buttons/game menu/CHECKMARK Hover.png" id="16_20i7e"]
+[ext_resource type="Texture2D" uid="uid://cbthh17qws51b" path="res://interface/menus/assets/buttons/game menu/CROSS MARK.png" id="17_k42i2"]
+[ext_resource type="Texture2D" uid="uid://gsjeuu8b4qcu" path="res://interface/menus/assets/buttons/game menu/CROSS MARK Pressed.png" id="18_bg5q5"]
+[ext_resource type="Texture2D" uid="uid://bv7kcnulgfte0" path="res://interface/menus/assets/buttons/game menu/CROSS MARK Hover.png" id="19_g0ud0"]
 
 [node name="GameMenu" type="CanvasLayer" unique_id=313921959]
+script = ExtResource("1_25804")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=75826842]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = 771.0
+offset_bottom = 432.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_xphd3")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=737805750]
+offset_left = 210.0
+offset_top = 472.0
+offset_right = 5226.0
+offset_bottom = 1472.0
+scale = Vector2(0.15, 0.15)
+alignment = 1
+
+[node name="NETWORK" type="TextureButton" parent="HBoxContainer" unique_id=1558766630]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath("../QUIT")
+focus_neighbor_right = NodePath("../LOCAL")
+texture_normal = ExtResource("2_25804")
+texture_pressed = ExtResource("3_aq5ni")
+texture_hover = ExtResource("3_aq5ni")
+texture_focused = ExtResource("3_aq5ni")
+
+[node name="Label" type="Label" parent="HBoxContainer/NETWORK" unique_id=75884875]
+layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -192.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_5210v")
+theme_override_font_sizes/font_size = 115
+text = "NETWORK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LOCAL" type="TextureButton" parent="HBoxContainer" unique_id=1902144020]
+layout_mode = 2
+focus_neighbor_left = NodePath("../NETWORK")
+focus_neighbor_right = NodePath("../DOJO")
+texture_normal = ExtResource("5_wqmhx")
+texture_pressed = ExtResource("6_tlgdv")
+texture_hover = ExtResource("6_tlgdv")
+texture_focused = ExtResource("6_tlgdv")
+
+[node name="Label" type="Label" parent="HBoxContainer/LOCAL" unique_id=776390033]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_5210v")
+theme_override_font_sizes/font_size = 115
+text = "LOCAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DOJO" type="TextureButton" parent="HBoxContainer" unique_id=134431693]
+layout_mode = 2
+focus_neighbor_left = NodePath("../LOCAL")
+focus_neighbor_right = NodePath("../STORY")
+texture_normal = ExtResource("7_vdste")
+texture_pressed = ExtResource("8_7hiyl")
+texture_hover = ExtResource("8_7hiyl")
+texture_focused = ExtResource("8_7hiyl")
+
+[node name="Label" type="Label" parent="HBoxContainer/DOJO" unique_id=811356802]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_5210v")
+theme_override_font_sizes/font_size = 115
+text = "DOJO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="STORY" type="TextureButton" parent="HBoxContainer" unique_id=852754356]
+layout_mode = 2
+focus_neighbor_left = NodePath("../DOJO")
+focus_neighbor_right = NodePath("../QUIT")
+texture_normal = ExtResource("9_2rdlm")
+texture_pressed = ExtResource("10_20i7e")
+texture_hover = ExtResource("10_20i7e")
+texture_focused = ExtResource("10_20i7e")
+
+[node name="Label" type="Label" parent="HBoxContainer/STORY" unique_id=233203950]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_5210v")
+theme_override_font_sizes/font_size = 115
+text = "STORY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QUIT" type="TextureButton" parent="HBoxContainer" unique_id=1355325601]
+layout_mode = 2
+focus_neighbor_left = NodePath("../STORY")
+focus_neighbor_right = NodePath("../NETWORK")
+texture_normal = ExtResource("11_k42i2")
+texture_pressed = ExtResource("12_bg5q5")
+texture_hover = ExtResource("12_bg5q5")
+texture_focused = ExtResource("12_bg5q5")
+
+[node name="Label" type="Label" parent="HBoxContainer/QUIT" unique_id=243769753]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_5210v")
+theme_override_font_sizes/font_size = 115
+text = "QUIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=191056924]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -299.5
+offset_top = -246.0
+offset_right = 299.5
+offset_bottom = 227.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.026365364, 0.18626714, 0.19091544, 0.85882354)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1224804536]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = -178.5
+offset_right = 251.0
+offset_bottom = -67.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_5210v")
+theme_override_font_sizes/font_size = 38
+text = "Are you sure you would like to
+quit the game?"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect" unique_id=1559375620]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer" unique_id=1558766630]
+[node name="CONFIRM" type="TextureButton" parent="ColorRect/HBoxContainer" unique_id=932135222]
 layout_mode = 2
-texture_normal = ExtResource("1_0rs3o")
-texture_pressed = ExtResource("2_li33t")
-texture_hover = ExtResource("3_a5i74")
+focus_neighbor_left = NodePath("../CANCEL")
+focus_neighbor_right = NodePath("../CANCEL")
+texture_normal = ExtResource("14_7hiyl")
+texture_pressed = ExtResource("15_2rdlm")
+texture_hover = ExtResource("16_20i7e")
+texture_focused = ExtResource("16_20i7e")
 
-[node name="TextureButton2" type="TextureButton" parent="HBoxContainer" unique_id=591478951]
+[node name="CANCEL" type="TextureButton" parent="ColorRect/HBoxContainer" unique_id=1551810596]
 layout_mode = 2
-texture_normal = ExtResource("1_0rs3o")
-texture_pressed = ExtResource("2_li33t")
-texture_hover = ExtResource("3_a5i74")
+focus_neighbor_left = NodePath("../CONFIRM")
+focus_neighbor_right = NodePath("../CONFIRM")
+texture_normal = ExtResource("17_k42i2")
+texture_pressed = ExtResource("18_bg5q5")
+texture_hover = ExtResource("19_g0ud0")
+texture_focused = ExtResource("19_g0ud0")
 
-[node name="TextureButton3" type="TextureButton" parent="HBoxContainer" unique_id=159440146]
-layout_mode = 2
-texture_normal = ExtResource("1_0rs3o")
-texture_pressed = ExtResource("2_li33t")
-texture_hover = ExtResource("3_a5i74")
-
-[node name="TextureButton4" type="TextureButton" parent="HBoxContainer" unique_id=912419020]
-layout_mode = 2
-texture_normal = ExtResource("1_0rs3o")
-texture_pressed = ExtResource("2_li33t")
-texture_hover = ExtResource("3_a5i74")
-
-[node name="TextureButton5" type="TextureButton" parent="HBoxContainer" unique_id=275746298]
-layout_mode = 2
-texture_normal = ExtResource("1_0rs3o")
-texture_pressed = ExtResource("2_li33t")
-texture_hover = ExtResource("3_a5i74")
+[connection signal="pressed" from="HBoxContainer/NETWORK" to="." method="_on_network_pressed"]
+[connection signal="pressed" from="HBoxContainer/LOCAL" to="." method="_on_local_pressed"]
+[connection signal="pressed" from="HBoxContainer/DOJO" to="." method="_on_dojo_pressed"]
+[connection signal="pressed" from="HBoxContainer/STORY" to="." method="_on_story_pressed"]
+[connection signal="pressed" from="HBoxContainer/QUIT" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/CONFIRM" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/CANCEL" to="." method="_on_cancel_pressed"]

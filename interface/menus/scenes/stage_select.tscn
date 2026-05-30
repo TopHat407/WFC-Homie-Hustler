@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cp3yx2coekjnm"]
 
 [ext_resource type="Script" uid="uid://bclrrriw43psa" path="res://interface/menus/scripts/stage_select.gd" id="1_5dmii"]
-[ext_resource type="Texture2D" uid="uid://b7u4jnlni3m5r" path="res://interface/menus/assets/Prototype Stage UI.png" id="1_fdixb"]
-[ext_resource type="Texture2D" uid="uid://c800kanoxhwp8" path="res://interface/menus/assets/Locked Stage UI.png" id="2_6i14v"]
-[ext_resource type="Texture2D" uid="uid://dwfrjms2frgmr" path="res://interface/menus/assets/Prototype Stage UI Pressed.png" id="2_060h0"]
-[ext_resource type="Texture2D" uid="uid://f8guj2rqtwsp" path="res://interface/menus/assets/Prototype Stage UI Hover.png" id="3_5dmii"]
-[ext_resource type="Texture2D" uid="uid://dgia6px1cmjfm" path="res://interface/menus/assets/Locked Stage UI Pressed.png" id="5_0dktv"]
-[ext_resource type="Texture2D" uid="uid://bkrawpaajl5kh" path="res://interface/menus/assets/Locked Stage UI Hover.png" id="6_ykam8"]
+[ext_resource type="Texture2D" uid="uid://b7u4jnlni3m5r" path="res://interface/menus/assets/buttons/stage select/Prototype Stage UI.png" id="1_fdixb"]
+[ext_resource type="Texture2D" uid="uid://c800kanoxhwp8" path="res://interface/menus/assets/buttons/stage select/Locked Stage UI.png" id="2_6i14v"]
+[ext_resource type="Texture2D" uid="uid://dwfrjms2frgmr" path="res://interface/menus/assets/buttons/stage select/Prototype Stage UI Pressed.png" id="2_060h0"]
+[ext_resource type="Texture2D" uid="uid://f8guj2rqtwsp" path="res://interface/menus/assets/buttons/stage select/Prototype Stage UI Hover.png" id="3_5dmii"]
+[ext_resource type="Texture2D" uid="uid://dgia6px1cmjfm" path="res://interface/menus/assets/buttons/stage select/Locked Stage UI Pressed.png" id="5_0dktv"]
+[ext_resource type="Texture2D" uid="uid://bkrawpaajl5kh" path="res://interface/menus/assets/buttons/stage select/Locked Stage UI Hover.png" id="6_ykam8"]
 
 [node name="StageSelect" type="CanvasLayer" unique_id=1503700667]
 script = ExtResource("1_5dmii")

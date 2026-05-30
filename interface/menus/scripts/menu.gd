@@ -25,4 +25,4 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventJoypadButton:
 		TransitionManager.anim.play("fade in")
 		await TransitionManager.anim.animation_finished
-		get_tree().change_scene_to_file("res://interface/menus/scenes/character_select.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://interface/menus/scenes/game_menu.tscn")
