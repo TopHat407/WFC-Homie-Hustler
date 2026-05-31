@@ -5,7 +5,9 @@
 
 [node name="SoundManager" type="AudioStreamPlayer" unique_id=786857456]
 stream = ExtResource("1_klwgq")
+volume_db = -20.0
 autoplay = true
 script = ExtResource("2_ilgwi")
 
 [node name="ButtonPlayer" type="AudioStreamPlayer" parent="." unique_id=974348332]
+volume_db = -15.0

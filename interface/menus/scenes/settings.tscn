@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cbv83wt1cuw86"]
+
+[ext_resource type="FontFile" uid="uid://bq3jv7yoboe21" path="res://assets/fonts/Cheltenham Condensed Bold.ttf" id="1_8ehs6"]
+[ext_resource type="Texture2D" uid="uid://cb1qpwhyq3a15" path="res://interface/menus/assets/buttons/game menu/CHECKMARK.png" id="2_ysa50"]
+[ext_resource type="Texture2D" uid="uid://c5s4t5iji3t68" path="res://interface/menus/assets/buttons/game menu/CHECKMARK Pressed.png" id="3_48eyx"]
+[ext_resource type="Texture2D" uid="uid://k816232rfhte" path="res://interface/menus/assets/buttons/game menu/CHECKMARK Hover.png" id="4_40tyl"]
+
+[node name="Settings" type="Control" unique_id=1038373946]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1640360468]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3003472
+anchor_right = 0.7005208
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SETTINGS" type="Label" parent="Panel" unique_id=1671413087]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.06481481
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_8ehs6")
+theme_override_font_sizes/font_size = 30
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=69645065]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer1" type="Control" parent="Panel/VBoxContainer" unique_id=194430916]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+
+[node name="VOLUME" type="Label" parent="Panel/VBoxContainer" unique_id=1506532931]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_8ehs6")
+text = "VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VOLUMESLIDER" type="HSlider" parent="Panel/VBoxContainer" unique_id=1921285448]
+layout_mode = 2
+value = 39.0
+
+[node name="Spacer2" type="Control" parent="Panel/VBoxContainer" unique_id=1187128634]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CONFIRM" type="Label" parent="Panel/VBoxContainer" unique_id=340956814]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_8ehs6")
+text = "CONFIRM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EXIT" type="TextureButton" parent="Panel/VBoxContainer" unique_id=299155281]
+layout_mode = 2
+texture_normal = ExtResource("2_ysa50")
+texture_pressed = ExtResource("3_48eyx")
+texture_hover = ExtResource("4_40tyl")
+texture_focused = ExtResource("4_40tyl")
+stretch_mode = 3
