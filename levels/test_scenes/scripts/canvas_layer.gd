@@ -17,8 +17,6 @@ func _ready() -> void:
 	cpu_icon.texture = preload("res://entities/characters/debug test dummy/assets/Dummy Portrait.png")
 	player_health.value = 100
 	cpu_health.value = 100
-	%Dummy.hit_enemy.connect(on_enemy_hit)
-	%Player.hit_player.connect(on_player_hit)
 
 func _physics_process(delta: float) -> void:
 	if cpu_health.value <= 0 and gameover == false:

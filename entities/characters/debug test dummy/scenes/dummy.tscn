@@ -4,13 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://emgpcmnei0h8" path="res://entities/characters/debug test dummy/assets/Dummy Idle.png" id="1_ql7ij"]
 [ext_resource type="Texture2D" uid="uid://djcotufat23qo" path="res://entities/characters/debug test dummy/assets/Dummy Fall.png" id="2_01cyl"]
 [ext_resource type="Texture2D" uid="uid://b7terd1uxvvs8" path="res://entities/characters/debug test dummy/assets/Dummy Hurt.png" id="2_t2gcn"]
-[ext_resource type="Script" uid="uid://bicnrrrm02etf" path="res://state machine/main state machine scripts/State Machine.gd" id="4_ylwb1"]
-[ext_resource type="Script" uid="uid://cw4xonm21jllp" path="res://state machine/states/dummy_states/idle.gd" id="5_hdvb6"]
 [ext_resource type="Texture2D" uid="uid://mpin7u8dox7e" path="res://entities/characters/debug test dummy/assets/Dummy Lose.png" id="5_smnuh"]
-[ext_resource type="Script" uid="uid://dt5i8kkdqmweh" path="res://state machine/states/dummy_states/hurt.gd" id="6_26rqn"]
-[ext_resource type="Script" uid="uid://cedkmnvsf5q5t" path="res://state machine/states/dummy_states/win.gd" id="7_01cyl"]
-[ext_resource type="Script" uid="uid://crrqudbctn26n" path="res://state machine/states/dummy_states/falling.gd" id="8_r22n6"]
-[ext_resource type="Script" uid="uid://dlpubphpu7cpm" path="res://state machine/states/dummy_states/lose.gd" id="10_r22n6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_64616"]
 atlas = ExtResource("2_01cyl")
@@ -182,7 +176,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v7ctd")
 }],
-"loop": false,
+"loop": 0,
 "name": &"fall",
 "speed": 5.0
 }, {
@@ -205,7 +199,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ffwf0")
 }],
-"loop": false,
+"loop": 0,
 "name": &"hurt",
 "speed": 24.0
 }, {
@@ -237,7 +231,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r22n6")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -296,7 +290,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n02af")
 }],
-"loop": false,
+"loop": 0,
 "name": &"lose",
 "speed": 12.0
 }]
@@ -333,33 +327,4 @@ shape = SubResource("CapsuleShape2D_3s1cv")
 position = Vector2(0, 7)
 shape = SubResource("CapsuleShape2D_r021x")
 
-[node name="StateMachine" type="Node" parent="." unique_id=1914537562]
-script = ExtResource("4_ylwb1")
-
-[node name="Idle" type="Node" parent="StateMachine" unique_id=783890214]
-script = ExtResource("5_hdvb6")
-metadata/_custom_type_script = "uid://bg4o10x76yv3q"
-
-[node name="Hurt" type="Node" parent="StateMachine" unique_id=2076843508]
-script = ExtResource("6_26rqn")
-metadata/_custom_type_script = "uid://bg4o10x76yv3q"
-
-[node name="HurtTimer" type="Timer" parent="StateMachine/Hurt" unique_id=2122502743]
-wait_time = 0.3
-one_shot = true
-
-[node name="Win" type="Node" parent="StateMachine" unique_id=970284769]
-script = ExtResource("7_01cyl")
-metadata/_custom_type_script = "uid://bg4o10x76yv3q"
-
-[node name="Falling" type="Node" parent="StateMachine" unique_id=380709371]
-script = ExtResource("8_r22n6")
-metadata/_custom_type_script = "uid://bg4o10x76yv3q"
-
-[node name="Lose" type="Node" parent="StateMachine" unique_id=1936105783]
-script = ExtResource("10_r22n6")
-metadata/_custom_type_script = "uid://bg4o10x76yv3q"
-
-[connection signal="dummylose" from="." to="StateMachine/Idle" method="_on_dummy_dummylose"]
-[connection signal="hit_enemy" from="." to="StateMachine/Idle" method="_on_dummy_hit_enemy"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_area_2d_area_entered"]
